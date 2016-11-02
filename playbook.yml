@@ -1,0 +1,5 @@
+---
+- hosts: all
+  roles:
+    - role: ansible-zabbix-repo
+      zabbix_version: 3.2

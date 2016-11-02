@@ -1,0 +1,18 @@
+---
+# Ubuntu tasks file for ansible-zabbix-repo
+- name: Install zabbix apt key
+  apt_key:
+    url: "{{ key_url }}"
+    keyring: "{{ keyring_path }}"
+
+- name: Add zabbix {{ zabbix_version }} repository
+  apt_repository:
+    filename: zabbix
+    repo: "{{ repo_url }}"
+    update_cache: yes
+
+- name: Add zabbix {{ zabbix_version }} src repository
+  apt_repository:
+    filename: zabbix
+    repo: "{{ repo_src_url }}"
+    update_cache: yes
