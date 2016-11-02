@@ -6,7 +6,7 @@
     file: zabbix
     description: Zabbix Official Repository
     baseurl: "{{ zabbix_repo_url }}"
-    gpgkey: "{{ zabbix_repo_key }}"
+    gpgkey: "{{ zabbix_repo_key[zabbix_version] }}"
     gpgcheck: yes
 
 - name: Add zabbix {{ zabbix_version }} non-supported repository

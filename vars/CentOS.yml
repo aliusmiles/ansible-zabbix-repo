@@ -1,7 +1,9 @@
 ---
 # CentOS vars file for ansible-zabbix-repo
 zabbix_repo_url: "http://repo.zabbix.com/zabbix/{{ zabbix_version }}/rhel/{{  ansible_distribution_major_version  }}/$basearch/"
-zabbix_repo_key: "http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-A14FE591"
+zabbix_repo_key:
+    3.0: "http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX"
+    3.2: "http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX-A14FE591"
 
 zabbix_ns_repo_url: "http://repo.zabbix.com/non-supported/rhel/{{  ansible_distribution_major_version  }}/$basearch/"
 zabbix_ns_repo_key: "http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX"
