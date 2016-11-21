@@ -1,6 +1,7 @@
 ---
 # Ubuntu vars file for ansible-zabbix-repo
-key_url: "http://repo.zabbix.com/zabbix-official-repo.key"
-keyring_path: "/etc/apt/trusted.gpg.d/zabbix-official-repo.gpg"
-repo_url: "deb http://repo.zabbix.com/zabbix/{{ zabbix_version }}/ubuntu {{ ansible_distribution_release }} main"
-repo_src_url: "deb-src http://repo.zabbix.com/zabbix/{{ zabbix_version }}/ubuntu {{ ansible_distribution_release }} main"
+zabbix_repo:
+  key_url: "http://repo.zabbix.com/zabbix-official-repo.key"
+  keyring_path: "/etc/apt/trusted.gpg.d/zabbix-official-repo.gpg"
+  url: "deb http://repo.zabbix.com/zabbix/{{ zabbix_version }}/ubuntu {{ ansible_distribution_release }} main"
+  src_url: "deb-src http://repo.zabbix.com/zabbix/{{ zabbix_version }}/ubuntu {{ ansible_distribution_release }} main"

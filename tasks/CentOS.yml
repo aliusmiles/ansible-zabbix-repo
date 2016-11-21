@@ -5,8 +5,8 @@
     name: zabbix
     file: zabbix
     description: Zabbix Official Repository
-    baseurl: "{{ zabbix_repo_url }}"
-    gpgkey: "{{ zabbix_repo_key[zabbix_version] }}"
+    baseurl: "{{ zabbix_repo.url }}"
+    gpgkey: "{{ zabbix_repo.key[zabbix_version] }}"
     gpgcheck: yes
 
 - name: Add zabbix {{ zabbix_version }} non-supported repository
@@ -14,6 +14,6 @@
     name: zabbix-non-supported
     file: zabbix
     description: Zabbix Official Repository non-supported
-    baseurl: "{{ zabbix_ns_repo_url }}"
-    gpgkey: "{{ zabbix_ns_repo_key }}"
+    baseurl: "{{ zabbix_repo.ns_url }}"
+    gpgkey: "{{ zabbix_repo.ns_key }}"
     gpgcheck: yes
